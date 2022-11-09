@@ -88,7 +88,6 @@ public class ConsoleInput {
 			case ITestdataGeneration.TESTDATA_GENERATION_STRATEGIES.FAST_MARS + "":
 				mars = new FastTestdataGeneration(function);
 				break;
-
 			default:
 				throw new Exception("Wrong test data generation strategy");
 			}

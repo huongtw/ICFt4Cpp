@@ -72,17 +72,22 @@ public class Console {
 		 * AUTHOR: PLEASE CONFIGURE HERE
 		 */
 		String TESTING_PROJET_PATH = Paths.JOURNAL_TEST;
-		String TESTING_FUNCTIONS_LIST = "E:/workspace/java/cft4cpp-core/local/test.txt";
-		String CONFIGURATION_FILE_PATH = "E:/workspace/java/cft4cpp-core/local/setting.properties";
+		String TESTING_FUNCTIONS_LIST = "D:/ICFT4Cpp2/cft4cpp-core/local/test.txt";
+		String CONFIGURATION_FILE_PATH = "D:/ICFT4Cpp2/cft4cpp-core/local/setting.properties";
 		/**
 		 * AUTHOR: THE END OF CONFIGURATION
 		 */
 		args = new String[] { Console.LOAD_PROJECT, new File(TESTING_PROJET_PATH).getCanonicalPath(),
 				Console.TESTED_FUNCTIONS, TESTING_FUNCTIONS_LIST, Console.CONFIG, CONFIGURATION_FILE_PATH,
 				Console.LOG4J_LEVEL, "debug" };
-
 		Console console = new Console(args);
 		console.exportToHtml(new File(AbstractSetting.getValue(Settingv2.TEST_REPORT)), "xxx");
+		
+		System.out.println("DONE!");
+				
+		System.out.println("Output View file at " + AbstractSetting.getValue(Settingv2.TEST_REPORT));
+		
+		System.out.println("Input unit under test: D:\\ICFT4Cpp2\\cft4cpp-core\\local\\input.txt");
 	}
 
 	private ConsoleInput analyzeArgs(String[] args) {
